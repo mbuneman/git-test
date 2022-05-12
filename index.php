@@ -1,27 +1,7 @@
 <?php
+require_once('./manager.php');
+require_once('./secretaire');
 
-class Employe{
-    private $nom;
-    private $prenom;
-    private $age;
+$al = new Manager('Capone', 'Al', 32);
+$sylvie = new Secretaire('Druand', 'Sylvie', 32);
 
-    public function __construct($nom, $prenom, $age)
-    {
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->age = (int) $age;
-
-    }
-
-    public function getNom(){
-        return $this->nom;
-    }
-    
-    public function setNom($nom){
-        if(!is_string($nom)){
-            die();
-        }
-        $this->noprenomm = $prenom;
-    }
-
-}
